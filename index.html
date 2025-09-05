@@ -3,108 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyễn Văn A - Bio</title>
+  <title>Nud - Profile</title>
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f7fb;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
     }
-    .container {
-      max-width: 900px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    .avatar {
+      margin-top: 50px;
+    }
+    .avatar img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #ff99ff, 0 0 40px #ff33cc;
     }
     h1 {
-      color: #2d89ef;
-      text-align: center;
-      margin-bottom: 5px;
+      margin: 20px 0 5px;
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff33cc;
     }
-    h3 {
-      text-align: center;
-      font-weight: normal;
-      color: #666;
-      margin-top: 0;
+    .subtitle {
+      color: #aaa;
+      font-style: italic;
     }
-    section {
+    .social {
       margin: 30px 0;
     }
-    section h2 {
-      color: #2d89ef;
-      border-left: 5px solid #2d89ef;
-      padding-left: 10px;
-      margin-bottom: 15px;
+    .social a {
+      display: inline-block;
+      margin: 10px;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      background: #5865F2;
+      padding: 10px 20px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
     }
-    ul {
-      line-height: 1.8;
+    .social a:hover {
+      background: #4752C4;
+      transform: scale(1.1);
     }
-    .footer {
-      text-align: center;
+    .heart {
+      font-size: 40px;
+      color: #ff66cc;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    .stats {
       margin-top: 30px;
       font-size: 14px;
-      color: #888;
+      color: #ccc;
     }
-    .social a {
+    .stats span {
       margin: 0 10px;
-      color: #2d89ef;
-      text-decoration: none;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Nguyễn Văn A</h1>
-    <h3>Fullstack Developer</h3>
+  <!-- Avatar mèo -->
+  <div class="avatar">
+    <img src="https://i.ibb.co/4g8pD8z/cute-cat.png" alt="Avatar">
+  </div>
 
-    <section>
-      <h2>👋 Giới thiệu</h2>
-      <p>
-        Mình là một Fullstack Developer với hơn <b>3 năm kinh nghiệm</b> trong phát triển ứng dụng web và hệ thống backend. 
-        Mình yêu thích việc tạo ra sản phẩm có thể scale tốt, chạy mượt mà cho hàng chục ngàn người dùng và vẫn giữ được trải nghiệm thân thiện.
-      </p>
-    </section>
+  <!-- Tên -->
+  <h1>Nud</h1>
+  <p class="subtitle">currently idle</p>
 
-    <section>
-      <h2>💡 Điểm mạnh & Kỹ năng</h2>
-      <ul>
-        <li>Thành thạo <b>Python, JavaScript, React, Node.js, SQL</b></li>
-        <li>Kinh nghiệm triển khai trên <b>AWS, Docker, Kubernetes</b>, CI/CD pipelines</li>
-        <li>Tối ưu cơ sở dữ liệu giúp tăng hiệu năng hệ thống <b>30%</b></li>
-        <li>Làm việc hiệu quả theo mô hình <b>Agile/Scrum</b>, giao tiếp tốt trong team đa quốc gia</li>
-        <li>Thường xuyên mentoring cho junior devs, chia sẻ kiến thức về clean code & best practices</li>
-      </ul>
-    </section>
+  <!-- Nút Discord -->
+  <div class="social">
+    <a href="https://discord.com/users/yourid" target="_blank">💬 Discord</a>
+    <a href="#">🎵 Nhạc</a>
+  </div>
 
-    <section>
-      <h2>🏆 Thành tựu tiêu biểu</h2>
-      <ul>
-        <li>Phát triển hệ thống thương mại điện tử phục vụ <b>50.000+ người dùng/tháng</b> với uptime 99.9%</li>
-        <li>Rút ngắn <b>40% thời gian triển khai</b> nhờ hệ thống CI/CD tự động</li>
-        <li>Đạt chứng chỉ <b>AWS Certified Solutions Architect</b> & <b>Scrum Master Certified (SMC)</b></li>
-      </ul>
-    </section>
+  <!-- Trái tim -->
+  <div class="heart">❤</div>
 
-    <section>
-      <h2>🎯 Định hướng</h2>
-      <p>
-        Hướng đến vị trí <b>Senior Software Engineer</b>, đồng thời mở rộng kỹ năng ở mảng <b>AI & Cloud</b>. 
-        Mình tin rằng công nghệ không chỉ giải quyết vấn đề kỹ thuật, mà còn mở ra cơ hội tạo ra giá trị thực tiễn và bền vững cho doanh nghiệp lẫn cộng đồng.
-      </p>
-    </section>
-
-    <div class="footer">
-      <div class="social">
-        <a href="https://github.com/username" target="_blank">GitHub</a> | 
-        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
-      </div>
-      <p>© 2025 Nguyễn Văn A</p>
-    </div>
+  <!-- Thông tin -->
+  <div class="stats">
+    <span>❤️ 4</span>
+    <span>👁️ 281</span>
+    <span>📍 In Your Heart</span>
   </div>
 </body>
 </html>
