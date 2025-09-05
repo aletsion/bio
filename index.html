@@ -1,125 +1,144 @@
-/* From Uiverse.io by Praashoo7 */ 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nút Social</title>
+  <style>
+    /* From Uiverse.io by Praashoo7 */
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-.up {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-}
+    .up, .down {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+    }
 
-.down {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-}
+    .card1, .card2, .card3, .card4 {
+      width: 90px;
+      height: 90px;
+      outline: none;
+      border: none;
+      background: white;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      transition: .2s ease-in-out;
+    }
 
-.card1 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 90px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
+    .card1 {
+      border-radius: 90px 5px 5px 5px;
+    }
+    .card2 {
+      border-radius: 5px 90px 5px 5px;
+    }
+    .card3 {
+      border-radius: 5px 5px 5px 90px;
+    }
+    .card4 {
+      border-radius: 5px 5px 90px 5px;
+    }
 
-.instagram {
-  margin-top: 1.5em;
-  margin-left: 1.2em;
-  fill: #cc39a4;
-}
+    .instagram {
+      margin-top: 1.5em;
+      margin-left: 1.2em;
+      fill: #cc39a4;
+    }
 
-.card2 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 5px 90px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
+    .twitter {
+      margin-top: 1.5em;
+      margin-left: -.9em;
+      fill: #03A9F4;
+    }
 
-.twitter {
-  margin-top: 1.5em;
-  margin-left: -.9em;
-  fill: #03A9F4;
-}
+    .github {
+      margin-top: -.6em;
+      margin-left: 1.2em;
+      fill: black;
+    }
 
-.card3 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 5px 5px 5px 90px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
+    .discord {
+      margin-top: -.9em;
+      margin-left: -1.2em;
+      fill: #8c9eff;
+    }
 
-.github {
-  margin-top: -.6em;
-  margin-left: 1.2em;
-}
+    .card1:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: #cc39a4;
+    }
+    .card1:hover .instagram {
+      fill: white;
+    }
 
-.card4 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 5px 5px 90px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
+    .card2:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: #03A9F4;
+    }
+    .card2:hover .twitter {
+      fill: white;
+    }
 
-.discord {
-  margin-top: -.9em;
-  margin-left: -1.2em;
-  fill: #8c9eff;
-}
+    .card3:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: black;
+    }
+    .card3:hover .github {
+      fill: white;
+    }
 
-.card1:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #cc39a4;
-}
+    .card4:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: #8c9eff;
+    }
+    .card4:hover .discord {
+      fill: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="up">
+      <!-- Instagram -->
+      <button class="card1">
+        <svg class="instagram" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm4.5 3.5A5.5 5.5 0 1 1 6.5 13a5.5 5.5 0 0 1 5.5-5.5zm0 2A3.5 3.5 0 1 0 15.5 13a3.5 3.5 0 0 0-3.5-3.5zm5-3.5a1 1 0 1 1 0 2h-1a1 1 0 0 1 0-2z"/>
+        </svg>
+      </button>
 
-.card1:hover .instagram {
-  fill: white;
-}
+      <!-- Twitter -->
+      <button class="card2">
+        <svg class="twitter" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.28 4.28 0 0 0 1.88-2.36 8.38 8.38 0 0 1-2.72 1.04 4.21 4.21 0 0 0-7.18 3.83A12 12 0 0 1 3.1 4.7a4.21 4.21 0 0 0 1.3 5.63 4.19 4.19 0 0 1-1.9-.53v.05a4.22 4.22 0 0 0 3.37 4.13 4.23 4.23 0 0 1-1.89.07 4.23 4.23 0 0 0 3.94 2.93A8.46 8.46 0 0 1 2 19.55a12 12 0 0 0 6.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.36 8.36 0 0 0 22.46 6z"/>
+        </svg>
+      </button>
+    </div>
 
-.card2:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #03A9F4;
-}
+    <div class="down">
+      <!-- GitHub -->
+      <button class="card3">
+        <svg class="github" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.85 10.95c.58.1.79-.25.79-.56v-2.01c-3.19.7-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.7.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.73 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.57.23 2.73.11 3.02.73.81 1.18 1.85 1.18 3.11 0 4.44-2.68 5.41-5.23 5.7.41.36.77 1.08.77 2.18v3.24c0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+      </button>
 
-.card2:hover .twitter {
-  fill: white;
-}
-
-.card3:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: black;
-}
-
-.card3:hover .github {
-  fill: white;
-}
-
-.card4:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #8c9eff;
-}
-
-.card4:hover .discord {
-  fill: white;
-}
+      <!-- Discord -->
+      <button class="card4">
+        <svg class="discord" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <path d="M20 4a19.91 19.91 0 0 0-4.89-1.5l-.23.46A19.91 19.91 0 0 1 16.06 5c-.64-.07-1.29-.12-1.94-.12s-1.3.04-1.94.12c.17-.22.33-.46.48-.71l-.23-.46A19.91 19.91 0 0 0 7.53 4C3.64 8.19 2.64 12.24 3 16c1.64 1.23 3.23 2 4.77 2.5l.94-1.53c-.51-.19-1-.42-1.45-.69.12-.09.23-.18.34-.27 2.64 1.23 5.48 1.23 8.12 0 .11.09.22.18.34.27-.45.27-.94.5-1.45.69l.94 1.53c1.54-.5 3.13-1.27 4.77-2.5.39-3.93-.72-7.98-3.32-12zM9.5 13c-.83 0-1.5-.9-1.5-2s.67-2 1.5-2 1.5.9 1.5 2-.67 2-1.5 2zm5 0c-.83 0-1.5-.9-1.5-2s.67-2 1.5-2 1.5.9 1.5 2-.67 2-1.5 2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
