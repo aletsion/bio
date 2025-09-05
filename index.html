@@ -4,95 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nud - Profile</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #000;
-      color: #fff;
-      text-align: center;
-      overflow-x: hidden;
-    }
-    .avatar {
-      margin-top: 50px;
-    }
-    .avatar img {
-      width: 200px;
-      border-radius: 50%;
-      box-shadow: 0 0 20px #ff99ff, 0 0 40px #ff33cc;
-    }
-    h1 {
-      margin: 20px 0 5px;
-      font-size: 40px;
-      color: #fff;
-      text-shadow: 0 0 10px #fff, 0 0 20px #ff33cc;
-    }
-    .subtitle {
-      color: #aaa;
-      font-style: italic;
-    }
-    .social {
-      margin: 30px 0;
-    }
-    .social a {
-      display: inline-block;
-      margin: 10px;
-      font-size: 18px;
-      color: #fff;
-      text-decoration: none;
-      background: #5865F2;
-      padding: 10px 20px;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
-    .social a:hover {
-      background: #4752C4;
-      transform: scale(1.1);
-    }
-    .heart {
-      font-size: 40px;
-      color: #ff66cc;
-      animation: pulse 1.5s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); opacity: 0.8; }
-    }
-    .stats {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #ccc;
-    }
-    .stats span {
-      margin: 0 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Avatar mèo -->
-  <div class="avatar">
-    <img src="https://i.ibb.co/4g8pD8z/cute-cat.png" alt="Avatar">
+  <!-- Nút loa -->
+  <button id="music-btn">🔊</button>
+
+  <!-- Mèo -->
+  <div class="cat">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="eyes">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+    </div>
   </div>
 
-  <!-- Tên -->
-  <h1>Nud</h1>
-  <p class="subtitle">currently idle</p>
+  <!-- Avatar -->
+  <div class="avatar">
+    <img src="assets/avatar.jpg" alt="Nud Avatar">
+  </div>
 
-  <!-- Nút Discord -->
-  <div class="social">
-    <a href="https://discord.com/users/yourid" target="_blank">💬 Discord</a>
-    <a href="#">🎵 Nhạc</a>
+  <!-- Tên + trạng thái -->
+  <h1 class="name">Nud</h1>
+  <p class="status">currently idle</p>
+
+  <!-- Nút -->
+  <div class="buttons">
+    <a href="#" class="btn discord">Discord</a>
+    <a href="#" class="btn music">Nhạc</a>
   </div>
 
   <!-- Trái tim -->
-  <div class="heart">❤</div>
+  <div class="heart"></div>
 
-  <!-- Thông tin -->
-  <div class="stats">
-    <span>❤️ 4</span>
-    <span>👁️ 281</span>
+  <!-- Footer info -->
+  <div class="footer">
+    <span>❤️ <span id="like-count">4</span></span>
+    <span>👁️ <span id="view-count">281</span></span>
     <span>📍 In Your Heart</span>
   </div>
+
+  <!-- Nhạc nền -->
+  <audio id="bg-music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
