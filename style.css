@@ -1,15 +1,16 @@
-/* From Uiverse.io by Smit-Prajapati */ 
+/* Profile Card - Size lớn */
 .card {
-  width: 280px;
-  height: 280px;
+  width: 500px;
+  height: 500px;
   background: white;
-  border-radius: 32px;
-  padding: 3px;
+  border-radius: 40px;
+  padding: 5px;
   position: relative;
-  box-shadow: #604b4a30 0px 70px 30px -50px;
+  box-shadow: #604b4a30 0px 100px 50px -50px;
   transition: all 0.5s ease-in-out;
 }
 
+/* Nút mail */
 .card .mail {
   position: absolute;
   right: 2rem;
@@ -22,18 +23,18 @@
   stroke: #fbb9b6;
   stroke-width: 3px;
 }
-
 .card .mail svg:hover {
   stroke: #f55d56;
 }
 
+/* Profile image */
 .card .profile-pic {
   position: absolute;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  top: 3px;
-  left: 3px;
-  border-radius: 29px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  top: 5px;
+  left: 5px;
+  border-radius: 35px;
   z-index: 1;
   border: 0px solid #fbb9b6;
   overflow: hidden;
@@ -41,36 +42,24 @@
 }
 
 .card .profile-pic img {
-  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  -o-object-position: 0px 0px;
   object-position: 0px 0px;
   transition: all 0.5s ease-in-out 0s;
 }
 
-.card .profile-pic svg {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: 0px 0px;
-  object-position: 0px 0px;
-  transform-origin: 45% 20%;
-  transition: all 0.5s ease-in-out 0s;
-}
-
+/* Phần thông tin */
 .card .bottom {
   position: absolute;
-  bottom: 3px;
-  left: 3px;
-  right: 3px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
   background: #fbb9b6;
-  top: 80%;
-  border-radius: 29px;
+  top: 70%;  /* làm phần thông tin cao hơn */
+  border-radius: 35px;
   z-index: 2;
-  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+  box-shadow: rgba(96, 75, 74, 0.18) 0px 5px 5px 0px inset;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
@@ -78,30 +67,31 @@
 .card .bottom .content {
   position: absolute;
   bottom: 0;
-  left: 1.5rem;
-  right: 1.5rem;
-  height: 160px;
+  left: 2rem;
+  right: 2rem;
+  height: 220px; /* tăng theo card */
 }
 
 .card .bottom .content .name {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: white;
   font-weight: bold;
 }
 
 .card .bottom .content .about-me {
   display: block;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: white;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 
+/* Social + button */
 .card .bottom .bottom-bottom {
   position: absolute;
-  bottom: 1rem;
-  left: 1.5rem;
-  right: 1.5rem;
+  bottom: 1.5rem;
+  left: 2rem;
+  right: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,7 +99,60 @@
 
 .card .bottom .bottom-bottom .social-links-container {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.card .bottom .bottom-bottom .social-links-container svg {
+  height: 28px;
+  fill: white;
+  filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.13));
+}
+
+.card .bottom .bottom-bottom .button {
+  background: white;
+  color: #fbb9b6;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  box-shadow: rgba(165, 132, 130, 0.13) 0px 5px 5px 0px;
+}
+.card .bottom .bottom-bottom .button:hover {
+  background: #f55d56;
+  color: white;
+}
+
+/* Hover effect */
+.card:hover {
+  border-top-left-radius: 70px;
+}
+
+.card:hover .bottom {
+  top: 25%;
+  border-radius: 90px 35px 35px 35px;
+}
+
+.card:hover .profile-pic {
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 10px solid #fbb9b6;
+  box-shadow: rgba(96, 75, 74, 0.18) 0px 5px 5px 0px;
+}
+
+.card:hover .profile-pic:hover {
+  transform: scale(1.4);
+  border-radius: 0px;
+}
+
+.card:hover .profile-pic img {
+  transform: scale(2.8);
+  object-position: 0px 40px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
 }
 
 .card .bottom .bottom-bottom .social-links-container svg {
